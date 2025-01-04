@@ -1,0 +1,58 @@
+:root {
+    /* Colors */
+    --bg-primary: #0d1117;
+    --bg-controls: rgba(13, 17, 23, 0.8);
+    --border-color: #30a14e;
+    --text-color: #40c463;
+    --text-hover: #fff;
+    
+    /* Spacing */
+    --spacing-sm: 5px;
+    --spacing-md: 10px;
+    --spacing-lg: 20px;
+    
+    /* Border */
+    --border-radius: 8px;
+    --button-radius: 4px;
+}
+
+/* Base styles */
+body {
+    margin: 0;
+    overflow: hidden;
+    background: var(--bg-primary);
+}
+
+/* Layout */
+canvas {
+    display: block;
+    background: var(--bg-primary);
+}
+
+/* Components */
+.controls {
+    position: fixed;
+    top: var(--spacing-lg);
+    left: var(--spacing-lg);
+    z-index: 1;
+    background: var(--bg-controls);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+}
+
+button {
+    padding: 8px 16px;
+    margin: 0 var(--spacing-sm);
+    border: 1px solid var(--border-color);
+    background: transparent;
+    color: var(--text-color);
+    border-radius: var(--button-radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* States */
+button:hover {
+    background: var(--border-color);
+    color: var(--text-hover);
+}
